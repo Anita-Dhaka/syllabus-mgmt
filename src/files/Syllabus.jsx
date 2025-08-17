@@ -1,10 +1,13 @@
+import { Flex } from "@chakra-ui/react";
 import { Outlet } from "@tanstack/react-router";
 
 export default function Syllabus(){
 
     return (
         <>
-        <Outlet />
+        <Flex justifyContent={'center'}>
+            <Outlet />
+        </Flex>
         </>
     )
 }

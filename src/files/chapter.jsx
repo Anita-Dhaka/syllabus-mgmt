@@ -39,6 +39,16 @@ export default function ChapterSelect({ subjectId, classId }) {
         <>
             <Flex gap='100px'>
                 <Stack gap="4" w='300px'>
+                    {!formShow && subjectId && (
+                        <Button
+                            variant='outline' size='sm'
+                            onClick={() => {
+                                handleAddChapter()
+                            }
+                            }>
+                            Add new Chapter
+                        </Button>
+                    )}
                     <Accordion.Root variant='subtle' collapsible value={chapterUrlValue} onValueChange={(e) => setChapterUrlValue(e.value)}>
                         {newChapterData.filter((data) => data.classId == classId && data.subjectId == subjectId).map((data) => (
                             <Accordion.Item key={data.id} value={data.id}>
@@ -77,16 +87,7 @@ export default function ChapterSelect({ subjectId, classId }) {
                             </Accordion.Item>
                         ))}
                     </Accordion.Root>
-                    {!formShow && subjectId && (
-                        <Button
-                            variant='outline' size='sm'
-                            onClick={() => {
-                                handleAddChapter()
-                            }
-                            }>
-                            Add new Chapter
-                        </Button>
-                    )}
+
                     {formShow && renderForm()}
                 </Stack>
                 {/* {chaptesIdValue && <ChapterContent classId={classId} subjecsId={subjecsId} chaptesId={chaptesIdValue} />} */}
