@@ -8,7 +8,7 @@ import ChapterSelect from "./chapter";
 export default function ClassSubject() {
 
     const search = useSearch({ from: classSubjectRoute.id });
-    const [classUrlValue, setClassUrlValue] = useState('1');
+    const [classUrlValue, setClassUrlValue] = useState(1);
     const [subjectUrlValue, setSubjectUrlValue] = useState(null);
     const navigate = useNavigate()
     let subjectIdArray = classData.find((data) => classUrlValue == data.className)?.subjectsId || [];
@@ -30,8 +30,8 @@ export default function ClassSubject() {
         <>
             <Flex direction='column' gap='6' ml='2'>
                 <Flex gap='5'>
-                    <NativeSelect.Root variant='outline' size="sm" width="100px">
-                        <NativeSelect.Field defaultValue={search.classId} placeholder="Select Class" value={classUrlValue} onChange={(e) => setClassUrlValue(e.currentTarget.value)}>
+                    <NativeSelect.Root variant='outline' size="sm" width="150px">
+                        <NativeSelect.Field defaultValue={search.classId} placeholder="Select Class" value={classUrlValue} onChange={(e) => setClassUrlValue(Number(e.currentTarget.value))}>
                             {classData.map((data) => (
                                 <option key={data.id} value={data.className}>
                                     {data.className}
@@ -40,8 +40,8 @@ export default function ClassSubject() {
                         </NativeSelect.Field>
                         <NativeSelect.Indicator />
                     </NativeSelect.Root>
-                    <NativeSelect.Root variant='outline' size="sm" width="180px">
-                        <NativeSelect.Field placeholder="Select Subject" value={subjectUrlValue} onChange={(e) => setSubjectUrlValue(e.currentTarget.value)}>
+                    <NativeSelect.Root variant='outline' size="sm" width="230px">
+                        <NativeSelect.Field placeholder="Select Subject" value={subjectUrlValue} onChange={(e) => setSubjectUrlValue(Number(e.currentTarget.value))}>
                             {subjectData.filter((data) => subjectIdArray.includes(data.id)).map((data) => (
                                 <option key={data.id} value={data.id}>
                                     {data.subjectName}

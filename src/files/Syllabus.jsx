@@ -5,7 +5,7 @@ export default function Syllabus(){
 
     return (
         <>
-        <Flex justifyContent={'center'}>
+        <Flex justifyContent={'center'} p='4' m='10px'>
             <Outlet />
         </Flex>
         </>

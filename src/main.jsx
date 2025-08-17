@@ -18,6 +18,7 @@ import Syllabus from './files/Syllabus.jsx'
 import LinksComponent from './files/links.jsx'
 import ClassSubject from './files/classSubject.jsx'
 import ChapterSelect from './files/chapter.jsx'
+import ChapterRender from './files/chapterRender.jsx'
 
 const rootRoute = createRootRoute({
   component: () => (
@@ -61,6 +62,12 @@ export const chapterRoute = createRoute({
   component: ChapterSelect,
 })
 
+export const chapterRenderRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/chapter/$chapterId',
+  component: ChapterRender,
+})
+
 const routeTree = rootRoute.addChildren([
   indexRoute,
   syllabusRoute.addChildren([
@@ -68,6 +75,7 @@ const routeTree = rootRoute.addChildren([
       chapterRoute,
     ]),
   ]),
+  chapterRenderRoute,
 ])
 
 const router = createRouter({
