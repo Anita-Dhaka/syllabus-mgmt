@@ -58,7 +58,7 @@ export const classSubjectRoute = createRoute({
 
 export const chapterRoute = createRoute({
   getParentRoute: () => classSubjectRoute,
-  path: '/{-$chapterUrl}',
+  path: '/{-$chapterId}',
   component: ChapterSelect,
 })
 
@@ -97,9 +97,4 @@ if (rootElement && !rootElement.innerHTML) {
   )
 }
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals()
-
-// need to add data and section no need for two more chapters
