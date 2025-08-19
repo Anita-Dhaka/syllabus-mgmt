@@ -19,14 +19,18 @@ import LinksComponent from './files/links.jsx'
 import ClassSubject from './files/classSubject.jsx'
 import ChapterSelect from './files/chapter.jsx'
 import ChapterRender from './files/chapterRender.jsx'
+import UserProvider from './files/context.jsx'
+import ChapterProvider from './files/context.jsx'
 
 const rootRoute = createRootRoute({
   component: () => (
     <>
       <ProviderX>
-        <LinksComponent />
-        <Outlet />
-        <TanStackRouterDevtools />
+        <ChapterProvider>
+          <LinksComponent />
+          <Outlet />
+          <TanStackRouterDevtools />
+        </ChapterProvider>
       </ProviderX>
     </>
   ),

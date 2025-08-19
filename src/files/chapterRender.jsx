@@ -2,16 +2,21 @@ import { useParams, useNavigate, useLocation } from "@tanstack/react-router";
 import { chapterRenderRoute, chapterRoute, classSubjectRoute } from "../main";
 import { Flex, Text, Button } from "@chakra-ui/react";
 import { chapterData, subjectData } from "./dataComponent";
+import { useContext } from "react";
+import { ChapterContext } from "./context";
 
 export default function ChapterRender() {
+  const { chapters } = useContext(ChapterContext);
+
   const { chapterId } = useParams({ from: chapterRenderRoute.id });
   const navigate = useNavigate()
-  const localChapterData = JSON.parse(localStorage.getItem("data"))
-  let Data = localChapterData.find((data) => data.id == chapterId)
+  let Data = chapters.find((data) => data.id == chapterId)
+    console.log("chapters ", chapters, chapterId)
+
   const classId = Data.classId
   const subjectId = Data.subjectId
 
-  const chapter = localChapterData.find(
+  const chapter = chapters.find(
     (data) =>
       String(data.id) === String(chapterId) &&
       String(data.classId) === String(classId) &&

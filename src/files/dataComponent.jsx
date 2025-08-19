@@ -35,8 +35,8 @@ export const classData = [
 ]
 
 export const chapterData = [
-    {
-        id: 1,
+    { // change this id to dynamic id
+        id: Math.random(),
         classId: 1,
         subjectId: 1,
         title: "Addition",
@@ -64,7 +64,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 2,
+        id: Math.random(),
         classId: 1,
         subjectId: 1,
         title: "Subtraction",
@@ -87,7 +87,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 3,
+        id: Math.random(),
         classId: 1,
         subjectId: 1,
         title: "Multiply",
@@ -110,7 +110,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 4,
+        id: Math.random(),
         classId: 1,
         subjectId: 2,
         title: "Food",
@@ -128,7 +128,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 5,
+        id: Math.random(),
         classId: 1,
         subjectId: 2,
         title: "Plants",
@@ -151,7 +151,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 6,
+        id: Math.random(),
         classId: 1,
         subjectId: 2,
         title: "Animals",
@@ -179,7 +179,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 7,
+        id: Math.random(),
         classId: 1,
         subjectId: 3,
         title: "Lamp",
@@ -197,7 +197,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 8,
+        id: Math.random(),
         classId: 1,
         subjectId: 3,
         title: "Tree",
@@ -215,7 +215,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 9,
+        id: Math.random(),
         classId: 2,
         subjectId: 1,
         title: "Data",
@@ -233,7 +233,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 10,
+        id: Math.random(),
         classId: 2,
         subjectId: 2,
         title: "Photosynthesis",
@@ -251,7 +251,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 11,
+        id: Math.random(),
         classId: 2,
         subjectId: 3,
         title: "Wind",
@@ -269,7 +269,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 12,
+        id: Math.random(),
         classId: 3,
         subjectId: 1,
         title: "Geometery",
@@ -287,7 +287,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 13,
+        id: Math.random(),
         classId: 3,
         subjectId: 2,
         title: "Food Chain",
@@ -305,7 +305,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 14,
+        id: Math.random(),
         classId: 3,
         subjectId: 3,
         title: "The idea",
@@ -323,7 +323,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 15,
+        id: Math.random(),
         classId: 4,
         subjectId: 1,
         title: "Arithmetics",
@@ -341,7 +341,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 16,
+        id: Math.random(),
         classId: 4,
         subjectId: 2,
         title: "Reflection",
@@ -359,7 +359,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 17,
+        id: Math.random(),
         classId: 4,
         subjectId: 3,
         title: "Aries",
@@ -377,7 +377,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 18,
+        id: Math.random(),
         classId: 4,
         subjectId: 4,
         title: "Akbar",
@@ -395,7 +395,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 19,
+        id: Math.random(),
         classId: 4,
         subjectId: 5,
         title: "Aazad",
@@ -413,7 +413,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 20,
+        id: Math.random(),
         classId: 5,
         subjectId: 1,
         title: "Statics",
@@ -431,7 +431,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 21,
+        id: Math.random(),
         classId: 5,
         subjectId: 2,
         title: "Light",
@@ -449,7 +449,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 22,
+        id: Math.random(),
         classId: 5,
         subjectId: 3,
         title: "Parents",
@@ -467,7 +467,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 23,
+        id: Math.random(),
         classId: 5,
         subjectId: 4,
         title: "Panipat",
@@ -485,7 +485,7 @@ export const chapterData = [
         ]
     },
     {
-        id: 24,
+        id: Math.random(),
         classId: 5,
         subjectId: 5,
         title: "TulsiDas",
